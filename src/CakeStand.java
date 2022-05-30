@@ -17,10 +17,10 @@ public class CakeStand {
     static Condition supplyCondition = lock.newCondition();
     // Static condition for waiting the first stand to put in Cake Ground
     static Condition anyStandCondition = lock.newCondition();
-    // Condition of a Stand for waiting Cake Slices if there is no Cake Slice in the Stand
-    Condition standCondition = monsterLock.newCondition();
     // Static condition for 1 Baker in the Cake Ground
     static Condition bakerCondition = lock.newCondition();
+    // Condition of a Stand for waiting Cake Slices if there is no Cake Slice in the Stand
+    Condition standCondition = monsterLock.newCondition();
     // Synchronized List of All Stands.
     static List<CakeStand> synchronizedList = Collections.synchronizedList(new ArrayList<>());
     // Synchronized List of All AVAILABLE Stands.
